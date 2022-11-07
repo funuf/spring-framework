@@ -58,6 +58,11 @@ import org.springframework.beans.BeansException;
  * @since 06.07.2003
  * @see BeanPostProcessor
  * @see PropertyResourceConfigurer
+ * --------------
+ * Spring提供了一种叫做BeanFactoryPostProcessor的容器扩展机制，该机制允许我们在容器实例化相应对象之前，对注册到容器的
+ * BeanDefinition所保存的信息做相应的修改。
+ * 如 {@link PropertyPlaceholderConfigurer},允许我们在XML配置文件中使用占位符（PlaceHolder）,并将这些占位符所代表的资源
+ * 单独配置到简单的properties文件中来。如数据源的配置。
  */
 @FunctionalInterface
 public interface BeanFactoryPostProcessor {

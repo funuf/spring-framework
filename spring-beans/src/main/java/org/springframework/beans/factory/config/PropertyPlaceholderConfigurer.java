@@ -52,6 +52,11 @@ import org.springframework.util.StringValueResolver;
  * @deprecated as of 5.2; use {@code org.springframework.context.support.PropertySourcesPlaceholderConfigurer}
  * instead which is more flexible through taking advantage of the {@link org.springframework.core.env.Environment}
  * and {@link org.springframework.core.env.PropertySource} mechanisms.
+ * -------
+ * Spring提供了一种叫做BeanFactoryPostProcessor的容器扩展机制，该机制允许我们在容器实例化相应对象之前，对注册到容器的
+ * BeanDefinition所保存的信息做相应的修改。
+ * {@link PropertyPlaceholderConfigurer},允许我们在XML配置文件中使用占位符（PlaceHolder）,并将这些占位符所代表的资源
+ *  * 单独配置到简单的properties文件中来。如数据源的配置。
  */
 @Deprecated
 public class PropertyPlaceholderConfigurer extends PlaceholderConfigurerSupport {

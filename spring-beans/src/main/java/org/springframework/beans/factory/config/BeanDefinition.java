@@ -37,6 +37,11 @@ import org.springframework.lang.Nullable;
  * @see ConfigurableListableBeanFactory#getBeanDefinition
  * @see org.springframework.beans.factory.support.RootBeanDefinition
  * @see org.springframework.beans.factory.support.ChildBeanDefinition
+ * ---------
+ * 该接口将XML、properties、注解等信息加载到Java世界里。
+ * 该接口用于描述一个Bean的实例，如其属性、构造参数以及其他信息。
+ *
+ * 当然，通常需要 {@link BeanFactoryPostProcessor}来检查或修改这些属性值。
  */
 public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 
